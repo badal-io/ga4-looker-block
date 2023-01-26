@@ -7,9 +7,15 @@ project_name: "ga4-looker-block-test2"
 #   project: "name_of_other_project"
 # }
 remote_dependency: ga4_block {
-  url: "https://github.com/looker-open-source/ga_four_block"
+  url: "https://github.com/looker-open-source/ga_four_block.git"
   ref: "master"
   override_constant: GA4_CONNECTION {
-    value: "looker-demos"
+    value: "ld-snowplow"
+  }
+  override_constant: GA4_SCHEMA {
+    value: "ld-snowplow.ga4_sample"
+  }
+  override_constant: GA4_TABLE_VARIABLE {
+    value: "events_20210131"
   }
 }
